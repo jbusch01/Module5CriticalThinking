@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
         
+        // ArrayLists for days of the week and temperatures for each day
         ArrayList<String> daysOfWeek = new ArrayList<>();
         ArrayList<Double> temperatures = new ArrayList<>();
 
@@ -33,9 +34,9 @@ public class Main {
                 double totalTemp = 0;
                 System.out.println("\nWeekly Temperature Report:");
 
-                for (int i = 0; i < daysOfWeek.size(); i++) {
-                    System.out.println(daysOfWeek.get(i) + ": " + temperatures.get(i) + "°F");
-                    totalTemp += temperatures.get(i);
+                for (int day = 0; day < daysOfWeek.size(); day++) {
+                    System.out.println(daysOfWeek.get(day) + ": " + temperatures.get(day) + "°F");
+                    totalTemp += temperatures.get(day);
                 }
 
                 double avgTemp = totalTemp / daysOfWeek.size();
@@ -45,15 +46,15 @@ public class Main {
 
             // loop logic to handle error's in user input
             boolean found = false;
-            for (int i = 0; i < daysOfWeek.size(); i++) {
-                if (userInput.equalsIgnoreCase(daysOfWeek.get(i))) {
-                    System.out.println(daysOfWeek.get(i) + "'s Temperature: " + temperatures.get(i) + "°F");
+            for (int day = 0; day < daysOfWeek.size(); day++) {
+                if (userInput.equalsIgnoreCase(daysOfWeek.get(day))) {
+                    System.out.println(daysOfWeek.get(day) + "'s Temperature: " + temperatures.get(day) + "°F");
                     found = true;
                     break;
                 }
             }
 
-            // error prompt for the user if they enter the wrong data type or misspell their input
+            // error message for the user if they enter the wrong data type or misspell their input
             if (!found) {
                 System.out.println("Invalid input. Please enter a valid day of the week (check spelling).");
             }

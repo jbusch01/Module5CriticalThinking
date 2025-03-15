@@ -1,0 +1,66 @@
+Begin
+    Import ArrayList
+    Import Scanner
+
+    Define Main class
+        Start program execution
+            Declare scanner as input variable
+  
+            # Developer Note: Initialize ArrayLists
+            Create ArrayList for daysOfWeek
+            Create ArrayList for temperatures
+
+            # Developer Note: Store days in daysOfWeek
+            Set 1st element for daysOfWeek ArrayList
+            Set 2nd element for daysOfWeek ArrayList
+            Set 3rd element for daysOfWeek ArrayList
+            Set 4th element for daysOfWeek ArrayList
+            Set 5th element for daysOfWeek ArrayList
+            Set 6th element for daysOfWeek ArrayList
+            Set 7th element for daysOfWeek ArrayList
+
+            # Developer Note: Collect temperatures for each day from user
+            Loop through daysOfWeek to collect user input for temperatures
+                Print message for user to input each daily average temperature
+                Read user input and store in temp
+                Add user input to temperatures ArrayList
+    
+
+            # Developer Note: Allow user to retrieve temperature data
+            Loop until user enters a valid input
+                Prompt user to enter a day of the week to see stored temperature
+                Read user input
+
+                If user enters "week", display all days, temps, and the weekly average
+                    Declare totalTemp value to set to 0
+                    Output weekly temperature Report
+
+                    Initiate For Loop to output temperatures if "week" is entered
+                        Print temperatures
+                        Store totalTemp by adding all temperatures in temperatures ArrayList
+
+
+                    Declare avgTemp variable to hold totalTemp divided by daysOfWeek ArrayList size
+                    Print the weekly average temperature
+                    Break Loop
+                
+
+                # Developer Note: Check if user input matches stored days
+                Declare Boolean variable found and set to false
+                Initiate For Loop to display each days temperature based on user input
+                    Set condition for output based on user input
+                        Print day and temperature
+                        Set found to true
+                        Break Loop
+
+
+
+                # Developer Note: Inform user of input error
+                Set condition for found variable
+                    Print error message if user inputs an invalid entry
+
+                
+
+            Close Scanner
+
+End
